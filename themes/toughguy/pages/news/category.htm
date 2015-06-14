@@ -1,0 +1,26 @@
+title = "News Category"
+url = "/news/category/:slug"
+layout = "default"
+hidden = "0"
+
+[blogCategories]
+slug = "{{ :slug }}"
+displayEmpty = "0"
+categoryPage = "404"
+
+[blogPosts]
+pageNumber = "{{ :page }}"
+categoryFilter = ":slug"
+postsPerPage = "10"
+noPostsMessage = "No posts found"
+sortOrder = "published_at desc"
+categoryPage = "404"
+postPage = "404"
+==
+<div class="col-md-2 col-md-offset-1">
+    {% component 'blogCategories' %}
+</div>
+
+<div class="col-md-10 main-content">
+    {% component 'blogPosts' %}
+</div>

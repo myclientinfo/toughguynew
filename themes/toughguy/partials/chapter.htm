@@ -1,0 +1,16 @@
+description = "The layout for a chapter location"
+==
+<div class="meetup-city">
+
+    <h4>{{city}}</h4>
+
+    Where: {{location}}<br>
+    Address: <a href="{{maplink}}" target="_blank">{{address}}</a><br>
+    When: {{time}}<br>
+    Contact: <a href="mailto:{{email}}">{{email}}@toughguybookclub.com.au</a><br>
+    {% if event %}
+    <a href="https://www.facebook.com/events/{{event}}">Facebook Event</a><br>
+    {% endif %}
+    <br>
+
+</div>

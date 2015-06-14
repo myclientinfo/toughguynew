@@ -1,0 +1,339 @@
+body {
+min-height: 100%;
+  background: url(../images/background.jpg) no-repeat center center fixed;
+  background-size: cover;
+}
+
+html {
+    height: 100%;
+}
+
+
+#outer_content {
+    min-height: 100%;
+    position: relative;
+}
+
+footer {
+    position: absolute;
+    bottom: 0px;
+}
+
+h1, h2, h3, h4 {
+    font-family: 'Open Sans Condensed', sans-serif;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
+.find-us h3 {
+    display: inline-block;
+    background-color: black;
+    color: white;
+    padding: 5px 10px;
+}
+
+#logo {
+  width: 80%;
+  position: absolute;
+  left: 6px;
+  z-index: 1000;
+}
+
+#sm-logo {
+  position: absolute;
+  left: 10px;
+  top: 0;
+}
+
+.header-top span {
+  background-color: rgba(255, 255, 255, 0.6);
+  color: black;
+  padding: 8px;
+  text-transform: uppercase;
+  font-size: 16px;
+  font-family: 'Open Sans Condensed', sans-serif;
+font-weight: 700;
+  position: absolute;
+  right: 0px;
+  top: 70px;
+}
+
+
+#layout-header .navbar-brand {
+  background-image: none;
+}
+
+
+.header-top {
+  background-image: url(../images/header.jpg);
+  background-size: cover;
+  height: 190px;
+  margin-bottom: 50px;
+
+}
+
+.menu-row {
+  border: 2px solid black;
+  background-color: white;
+  border-width: 2px 0px;
+}
+
+nav.navbar {
+  color: black;
+  text-transform: uppercase;
+  font-size: 16px;
+  font-family: 'Open Sans Condensed', sans-serif;
+font-weight: 700;
+border-width: 0;
+
+}
+
+.navbar {
+  margin: 0;
+}
+
+ul.nav.navbar-nav {
+  display: block;
+  width: 100%;
+}
+
+
+
+nav.navbar li:hover {
+  background-color: white;
+}
+
+
+
+nav.navbar li a:hover {
+  color: #666;
+background-color: white;
+}
+
+nav.navbar li.active {
+  background-color: black;
+  margin-left: -1px;
+}
+
+nav.navbar li.active:hover {
+  background-color: black;
+}
+
+nav.navbar li.active a {
+  color: white;
+  background-color: black;
+}
+
+nav.navbar li.active a:hover {
+  color: #666;
+
+}
+
+nav.navbar a {
+  color: black;
+  border: 0px solid black;
+  border-right-width: 1px;
+  font-family: 'Open Sans Condensed', sans-serif;
+font-weight: 700;
+font-size: 2em;
+
+}
+
+.navbar-nav li a {
+  margin: 5px 0px;
+  padding: 10px;
+}
+
+.sidenav {
+  background-color: black;
+  color: white;
+  margin: 2px;
+}
+
+.sidenav li {
+  background: url(../images/subnav-spacer.png) no-repeat center bottom;
+  padding-bottom: 15px;
+  margin-bottom: 3px;
+  text-align: center;
+  font-size: 2em;
+}
+
+.sidenav li:last-child {
+  background: none;
+padding: 0px;
+}
+
+.sidenav li a:hover {
+  background-color: black;
+  color: #ebebeb;
+}
+
+.sidenav li a {
+  color: white;
+  text-transform: uppercase;
+  font-family: 'Open Sans Condensed', sans-serif;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.sidenav-outer {
+  background-color: white;
+  border: 3px solid black;
+  position: relative;
+  top: 50px;
+}
+
+.sidenav-outer img {
+  position: absolute;
+  top: -30px;
+  left: 50%;
+  margin-left: -72px;
+
+}
+
+.main-content {
+  background-color: white;
+  border: 2px solid black;
+  border-bottom-width: 0px;
+  padding: 30px;
+  height: 100%;
+}
+
+.side-content {
+  height: 100%;
+}
+
+.meetup-city {
+
+}
+
+.next-meetup {
+    margin-top: 4px;
+    font-weight: bold;
+
+}
+
+.news ul, .books ul {
+    list-style-type: none;
+    margin: 0px;
+    padding: 0px;
+    padding-bottom: 20px;
+}
+
+h2.single-top {
+    margin-top: 0px;
+}
+
+.books .news, .news .books {
+    display: none;
+}
+
+.post-list li {
+  border: 0px solid black;
+  border-bottom-width: 2px;
+  padding-bottom: 20px;
+}
+
+.post-list li:last-child {
+  border-bottom-width: 0px;
+}
+
+#layout-footer {
+    background-color: white;
+    border: 0px black solid;
+    border-top-width: 2px;
+    width: 100%;
+    display:none;
+}
+
+#OctoDevelOctoSliderSimpleHacked {
+    height: 500px;
+    width: 100%;
+    position: relative;
+    list-style-type: none;
+    overflow: hidden;
+
+}
+
+#OctoDevelOctoSliderSimpleHacked li {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    opacity: 0;
+    transition: all 3s;
+    z-index: 100;
+}
+
+#OctoDevelOctoSliderSimpleHacked li img{
+    width: 100%;
+}
+
+#OctoDevelOctoSliderSimpleHacked li a {
+    position: absolute;
+    display: inline-block;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+}
+
+#OctoDevelOctoSliderSimpleHacked li.on {
+    opacity: 1;
+    z-index: 1000;
+}
+
+#OctoDevelOctoSliderSimpleHacked li div.title {
+    background-color: rgba(255, 255, 255, 0.6);
+    color: black;
+    padding: 8px;
+    text-transform: uppercase;
+    font-size: 16px;
+    font-family: 'Open Sans Condensed', sans-serif;
+    font-weight: 700;
+    position: absolute;
+    top: 70px;
+}
+
+#OctoDevelOctoSliderSimpleHacked li:nth-child(odd) div.title {
+    right: 0px;
+}
+
+#OctoDevelOctoSliderSimpleHacked li:nth-child(even) div.title {
+    left: 0px;
+}
+
+.social-link {
+    font-size: 40px;
+}
+
+ @media only screen and (max-width : 768px) {
+    .side-content {
+        display: none;
+    }
+    
+    .navbar-nav {
+        margin: 0px 15px;
+        z-index: 1000000;
+        position: relative;
+    }
+    
+    nav.navbar {
+        background-color: white;
+        z-index: 1000000;
+        border-bottom-width: 2px;
+        border-bottom-color: black;
+    }
+    
+    .icon-bar {
+        display:none;
+    }
+    
+    .header-top {
+        margin-bottom: 0px;
+    }
+    
+    
+}

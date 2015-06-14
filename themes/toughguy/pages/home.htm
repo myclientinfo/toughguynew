@@ -1,0 +1,26 @@
+title = "Home Page"
+url = "/"
+layout = "default"
+hidden = "0"
+
+[blogPosts]
+pageNumber = "{{ :page }}"
+postsPerPage = "10"
+noPostsMessage = "No posts found"
+sortOrder = "published_at desc"
+categoryPage = "news/category"
+postPage = "news/item"
+
+[carousel]
+id = "1"
+==
+<div class="text-center">
+<h2>LIKE A FIGHT CLUB FOR YOUR MIND<BR>A BOOK CLUB FOR THE THINKING TOUGH GUY</h2>
+
+{% component 'carousel' %}
+
+
+<div style="clear:both"></div>
+
+
+</div>

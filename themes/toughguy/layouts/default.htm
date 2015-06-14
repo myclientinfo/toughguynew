@@ -1,0 +1,122 @@
+description = "Default layout"
+==
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>The Tough Guy Book Club - {{ this.page.title }}</title>
+        <meta name="author" content="Matt Burgess">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="icon" type="image/png" href="{{ 'assets/images/logo.png'|theme }}" />
+        <link href='http://fonts.googleapis.com/css?family=Open+Sans+Condensed:300,700' rel='stylesheet' type='text/css'>
+        <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
+        {% styles %}
+        <link href="{{ [
+            'assets/css/theme.css', 'assets/css/custom.css'
+        ]|theme }}" rel="stylesheet">
+
+    </head>
+    <body>
+<div id="outer_content">
+    <!-- Header -->
+    <header id="layout-header">
+
+        <div class="header-top container-fluid">
+
+            <div class="row">
+
+                <a href="/"><img style="height: 137px;" id="sm-logo"  class="hidden-md hidden-lg" src="{{ 'assets/images/logo.png'|theme }}"></a>
+                <div class="col-md-12" style="height: 137px">
+                    <span>Welcome to the official tough guy book club website</span>
+                </div>
+            </div>
+
+        <!-- Nav -->
+
+            <div class="row menu-row">
+
+                <div class="col-md-3" style="padding: 0px;">
+
+                    <a href="/"><img id="logo" class="hidden-xs hidden-sm" src="{{ 'assets/images/logo.png'|theme }}"></a>
+                </div>
+
+                <div class="col-md-9" style="padding: 0px;">
+
+                    <nav id="layout-nav" class="navbar" role="navigation" style="border-radius: 0px;">
+
+                    <div class="container-fluid" style="margin:0px; padding: 0px;">
+                        <div class="navbar-header">
+                            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-main-collapse">MENU
+                                <span class="sr-only">Toggle navigation</span>
+                                <span class="icon-bar"></span>
+                                <span class="icon-bar"></span>
+                                <span class="icon-bar"></span>
+                            </button>
+                        </div>
+                        <div class="collapse navbar-collapse navbar-main-collapse row" style="padding: 0px">
+                            <ul class="nav navbar-nav">
+
+                                <li class="{% if this.page.id == 'about-us' %}active{% endif %}"><a href="{{ 'about-us'|page }}">About Us</a></li>
+                                <li class="{% if this.page.id == 'news' %}active{% endif %}"><a href="{{ 'news'|page }}">News</a></li>
+                                <li class="{% if this.page.id == 'find-us' %}active{% endif %}"><a href="{{ 'find-us'|page }}">Find Us</a></li>
+                                <li class="{% if this.page.id == 'books' %}active{% endif %}"><a href="{{ 'books'|page }}">Books</a></li>
+                                <li class="{% if this.page.id == 'contact' %}active{% endif %}"><a href="{{ 'contact'|page }}">Contact</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    </nav>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Content -->
+    <section id="layout-content">
+      <div class="container-fluid" style="height: 100%">
+
+        <div class="row" style="height: 100%">
+
+
+            <div class="col-md-3 col-sm-4 col-sm-offset-0 col-md-offset-1 side-content">
+                <div class="sidenav-outer">
+                    <ul class="nav sidenav">
+                        <li><a href="/join-chapter">Join a Chapter</a></li>
+                        <li class="last"><a href="/new-chapter">Start a Chapter</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="col-md-7 col-sm-8 main-content">
+
+                {% page %}
+
+            </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer id="layout-footer">
+        {% partial "footer" %}
+    </footer>
+    </div>
+    </div>
+    <!-- Scripts -->
+    <script src="{{ [
+        'assets/javascript/jquery.js',
+        'assets/javascript/carousel.js',
+        'assets/javascript/app.js'
+    ]|theme }}"></script>
+    {% framework extras %}
+    {% scripts %}
+    <script>
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+    
+      ga('create', 'UA-60305579-1', 'auto');
+      ga('send', 'pageview');
+    
+    </script>
+    </body>
+</html>
