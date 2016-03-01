@@ -29,7 +29,7 @@ $(document).tooltip({
 $( document ).ready(function() {
     $(window).on('resize', positionLogo);
     positionLogo();
-    mainContentHeight();
+    //mainContentHeight();
     if($('#OctoDevelOctoSliderSimpleHacked').length){
 	    setInterval(runSlider, 8000);
 	}

@@ -6,7 +6,7 @@ hidden = "0"
 [blogPosts]
 pageNumber = "{{ :page }}"
 categoryFilter = "books"
-postsPerPage = "10"
+postsPerPage = "100"
 noPostsMessage = "No posts found"
 sortOrder = "published_at desc"
 categoryPage = "books/category"
@@ -41,21 +41,3 @@ postPage = "books/item"
             <li class="no-data">{{ noPostsMessage }}</li>
         {% endfor %}
     </ul>
-
-    {% if posts.getLastPage > 1 %}
-        <ul class="pagination">
-            {% if posts.getCurrentPage > 1 %}
-                <li><a href="{{ this.page.baseFileName|page({ (pageParam): (posts.getCurrentPage-1) }) }}">← Prev</a></li>
-            {% endif %}
-
-            {% for page in 1..posts.getLastPage %}
-                <li class="{{ posts.getCurrentPage == page ? 'active' : null }}">
-                    <a href="{{ this.page.baseFileName|page({ (pageParam): page }) }}">{{ page }}</a>
-                </li>
-            {% endfor %}
-
-            {% if posts.getLastPage > posts.getCurrentPage %}
-                <li><a href="{{ this.page.baseFileName|page({ (pageParam): (posts.getCurrentPage+1) }) }}">Next →</a></li>
-            {% endif %}
-        </ul>
-    {% endif %}
